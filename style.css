@@ -1,0 +1,89 @@
+:root {
+  --bg: #f5f7fa;
+  --text: #1c2733;
+  --muted: #5b6b7b;
+  --block: #ffd400;
+  --water: #1fa2e6;
+  --grid: #c5ced8;
+  --error: #c0392b;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 20px 48px;
+}
+
+h1 { margin: 0 0 8px; }
+.intro { color: var(--muted); margin: 0 0 24px; max-width: 60ch; }
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.controls label { font-weight: 600; }
+
+.controls input {
+  flex: 1 1 260px;
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 1px solid var(--grid);
+  border-radius: 6px;
+}
+
+.controls button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: 0;
+  border-radius: 6px;
+  background: var(--water);
+  color: #fff;
+  cursor: pointer;
+}
+
+.controls button:hover { filter: brightness(0.92); }
+.controls :focus-visible { outline: 3px solid var(--text); outline-offset: 2px; }
+
+.error { color: var(--error); min-height: 1.4em; margin: 12px 0 0; }
+.result { font-size: 1.5rem; font-weight: 700; margin: 4px 0 16px; }
+
+.chart {
+  background: #fff;
+  border: 1px solid var(--grid);
+  border-radius: 8px;
+  padding: 12px;
+  overflow-x: auto; /* wide inputs scroll inside the box */
+}
+
+.chart svg { display: block; margin: 0 auto; }
+
+.legend {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+  color: var(--muted);
+}
+
+.swatch {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  vertical-align: -2px;
+  border: 1px solid var(--grid);
+}
+.swatch.block { background: var(--block); }
+.swatch.water { background: var(--water); }

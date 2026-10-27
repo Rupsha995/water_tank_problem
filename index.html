@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Water Tank Problem</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <h1>Water Tank Problem</h1>
+    <p class="intro">
+      Enter block heights separated by commas. Yellow blocks are the walls,
+      blue cells are the trapped water.
+    </p>
+
+    <div class="controls">
+      <label for="heights-input">Block heights</label>
+      <input id="heights-input" type="text" value="0,4,0,0,0,6,0,6,4,0" />
+      <button id="calculate-btn" type="button">Calculate</button>
+    </div>
+
+    <p id="error" class="error" role="alert"></p>
+    <p id="result" class="result"></p>
+
+    <div id="chart" class="chart"></div>
+
+    <ul class="legend">
+      <li><span class="swatch block"></span> Block</li>
+      <li><span class="swatch water"></span> Water</li>
+    </ul>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
